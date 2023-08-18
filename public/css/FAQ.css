@@ -1,0 +1,91 @@
+
+@font-face {font-family: "dana-fanum"; src: url("//db.onlinewebfonts.com/t/ae238c3ee498c52a23aab0d9f5e94d6b.woff");}
+
+body{
+    background-color: #fff;
+    font-family:dana-fanum;
+    
+}
+
+.container-fluid{
+    width: 50%;
+    margin: 30px auto;
+    margin-top: 100px;
+    direction: rtl;
+    box-shadow: -3px -3px 2px rgba(255, 255, 255, 0.3),
+                5px   5px  5px  rgba(0,0,0,0.2),
+                15px    15px    15px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 30px;            
+
+}
+.container-fluid h2{
+    color: hotpink;
+    
+    width: 23rem;
+
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.accordion{
+    width: 100%;
+    padding: 0 5px;
+ 
+    cursor: pointer;
+    border-radius: 50px;
+    display: flex;
+    margin: 10px 0;
+    align-items: center;
+    height: 50px;
+}
+.accordion .icon{
+    margin: 0 -6px 0 0;
+    width: 30px;
+    height:inherit;
+    
+    border-radius: 50%;
+    float: left;
+    transition: all .5s ease-in;
+    display: flex;
+justify-content: center;
+align-items: center;
+}
+.active .icon{
+    background-image: url(./icon-negative.png) no-repeat 8px -25px #fff;
+}
+
+.active h5{
+    color: #fff;
+}
+.accordion h5{
+    font-size: 22px;
+    margin: 0;
+    padding: 0 5px 0 0;
+    font-weight: normal;
+    color: #1f5c9a;
+
+}
+.panel{
+    padding: 0 15px;
+    border-right: 1px solid #6db5ff;
+    margin-left: 25px;
+    font-size: 14px;
+    text-align: justify;
+    overflow: hidden;
+    max-height:0;
+    transition: all .5s ease-in;
+
+}
+
+h3{
+    direction: ltr;
+    
+}
+h3 i{
+margin-left: .2em;
+}
+
+

@@ -1,0 +1,79 @@
+/* Basic styling */
+@font-face {font-family: "dana-fanum"; src: url("//db.onlinewebfonts.com/t/ae238c3ee498c52a23aab0d9f5e94d6b.woff");}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    font-family:"dana-fanum" 
+  }
+
+  /* image  */
+  .clr {
+    clear: both;
+  }
+  /*code for background*/
+  .dgift {
+    background:rgba(255, 255, 255, 0.808); ;
+    margin: 10px;
+  }
+  .h2a {
+    /* margin-top: 100px; */
+    padding: 20px;
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #0277BD;
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.452);
+    cursor: default;
+  }
+  
+  /* code for gallery*/
+  div.gallery {
+    margin: 20px;
+    margin-left: 7%;
+    float: left;
+    width: 300px;
+    box-shadow: 0 3px 3px 3px rgba(146, 146, 146, 0.726);
+    border-radius: 10px;
+  }
+  
+  div.gallery:hover {
+    transform: translateY(-10px);
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+  div.desc {
+    background-color: white;
+    cursor: default;
+    padding: 15px;
+    text-align: center;
+  }
+  .backbtn{
+    align-self: flex-end;
+    text-decoration: none;
+    font-size: 1.1rem;
+    text-align: end;
+color: white;
+  }
+
+.backbtn i{
+    margin-left: .2em;
+  }
+
+  .winimg{
+    width:100% ;
+    height:400px;
+    margin-bottom: 3rem;
+  }
+  
+
+
+  

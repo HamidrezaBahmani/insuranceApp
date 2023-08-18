@@ -1,0 +1,116 @@
+@font-face {font-family: "dana-fanum"; src: url("//db.onlinewebfonts.com/t/ae238c3ee498c52a23aab0d9f5e94d6b.woff");}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family:dana-fanum ;
+}
+/* rangpaszamine */
+body {
+  background: #04befe;
+}
+
+.all {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 20px;
+}
+.photo {
+  width: 50%;
+  border: solid 2px;
+  border-radius: 20px;
+  height: 540px;
+  margin: 15px;
+}
+.photo img {
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+}
+/* kadresefid */
+.main {
+  width: 40%;
+  text-align: center;
+  direction: rtl;
+  background-color: white;
+  padding: 35px;
+  margin: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 25px;
+}
+/* hazfe underline zire link */
+.main a {
+  text-decoration: none;
+}
+
+.input-container p {
+  color: rgb(26, 40, 230);
+  padding: 10px 20px 10px 20px;
+  border: solid 1px black;
+  border-radius: 10px 0px 0px 10px;
+  width: 100%;
+  /* text-align: center; */
+}
+.submi a {
+  color: white;
+}
+.submi a:hover {
+  text-decoration: underline;
+}
+.submi a:focus {
+  color: tomato;
+  text-decoration: underline;
+}
+
+.submi {
+  background-color: dodgerblue;
+  border: none;
+  padding: 15px 30px 15px 30px;
+  font-size: 25px;
+  font-weight: bold;
+  border-radius: 25px;
+  width: 90%;
+}
+
+/* mortab kardan input va icon */
+.input-container {
+  display: flex;
+  width: 90%;
+  margin: 20px 20px 20px 20px;
+  /* margin-bottom: 20px; */
+}
+/* shekel icon ha */
+.icon {
+  padding: 10px;
+  background: dodgerblue;
+  color: white;
+  min-width: 120px;
+  text-align: center;
+  font-weight: 500;
+  border-radius: 0px 20px 20px 0px;
+}
+
+@media all and (max-width: 768px) {
+  .all {
+    flex-direction: column;
+  }
+  .photo {
+    width: 92%;
+    height: 400px;
+  }
+  /* kadresefid */
+  .main {
+    width: 92%;
+  }
+}
+@media all and (max-width: 360px) {
+  .main {
+    width: 95%;
+    padding: 10px;
+    margin: 10px;
+  }
+  .submi {
+    font-size: 20px;
+  }
+}

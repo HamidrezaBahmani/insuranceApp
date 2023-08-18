@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.3.0/css/all.min.css" integrity="sha512-UJqci0ZyYcQ0AOJkcIkUCxLS2L6eNcOr7ZiypuInvEhO9uqIDi349MEFrqBzoy1QlfcjfURHl+WTMjEdWcv67A==" crossorigin="anonymous" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sign In & Sign Up Form</title>
+    <link rel="stylesheet" href="css/signupsignin.css">
+</head>
+
+<body>
+
+    <% if(error && error.length>0){%>
+        <div class="alertbox">
+            <span class="alertmsg"> <%=error%></span>
+            <span class="alerticon"><i class="fas fa-exclamation-circle"></i></span>
+
+
+        </div>
+        <% }%>
+
+
+            <% if(info && info.length>0){%>
+                <div class="infobox">
+
+                    <span class="infomsg"> <%=info%></span>
+                    <span class="infoicon"><i class="fas fa-info-circle"></i></span>
+
+                </div>
+                <% }%>
+
+                    <div class="signpagecontainer">
+                        <div class="form-container">
+                            <div class="signin-signup">
+                                <form action="/login" method="POST" class="sign-in-form">
+                                    <h2 class="title"> ورود به حساب کاربری</h2>
+                                    <div class="input-field">
+                                        <i class="fas fa-envelope"></i>
+                                        <input type="text"  name="email" placeholder="ایمیل" required>
+                                    </div>
+                                    <div class="input-field">
+                                        <i class="fas fa-lock"></i>
+                                        <input type="password" id="Password" name="password" placeholder="پسورد" required>
+                                    </div>
+                                    <input type="submit" value="ورود" class="btn solid">
+                                    <p class="social-text">ورود از طریق شبکه های اجتماعی</p>
+                                    <div class="social-media">
+                                        <a href="#" class="social-icon">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                        <a href="#" class="social-icon">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                        <a href="#" class="social-icon">
+                                            <i class="fab fa-google"></i>
+                                        </a>
+                                        <a href="#" class="social-icon">
+                                            <i class="fab fa-linkedin-in"></i>
+                                        </a>
+                                    </div>
+                                </form>
+
+
+
+
+
+                                <form action="/signup" method="POST" class="sign-up-form">
+                                    <h2 class="title">عضویت</h2>
+                                    <div class="input-field">
+                                        <i class="fas fa-user"></i>
+                                        <input type="text" id="Username" name="username" placeholder="نام کاربری"  required>
+                                    </div>
+                                    <div class="input-field">
+                                        <i class="fas fa-envelope"></i>
+                                        <input type="email" id="Email" name="email" placeholder="ایمیل" required>
+                                    </div>
+                                    <div class="input-field">
+                                        <i class="fas fa-lock"></i>
+                                        <input type="password" id="Password" name="password" placeholder="پسورد" required>
+                                    </div>
+                                    <input type="submit" value="ثبت نام" class="btn solid">
+                                    <p class="social-text">عضویت از طریق شبکه های اجتماعی</p>
+                                    <div class="social-media">
+                                        <a href="#" class="social-icon">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                        <a href="#" class="social-icon">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                        <a href="#" class="social-icon">
+                                            <i class="fab fa-google"></i>
+                                        </a>
+                                        <a href="#" class="social-icon">
+                                            <i class="fab fa-linkedin-in"></i>
+                                        </a>
+                                    </div>
+                                </form>
+
+
+
+
+                            </div>
+                        </div>
+                        <div class="panels-container">
+                            <div class="panel left-panel">
+                                <div class="content">
+                                    <h3>اینجا جدید هستید؟</h3>
+                                    <P>! با ایجاد حساب کاربری از امکانات کامل وب سایت بهره مند شوید </P>
+                                    <button class="btn transparent" id="sign-up-btn">عضویت</button>
+                                </div>
+                                <img src="/img/undraw_maker_launch_crhe.svg" class="image">
+                            </div>
+
+
+                            <div class="panel right-panel">
+                                <div class="content">
+                                    <h3>یکی از ما هستید؟</h3>
+                                    <p>برای تجربه بهتر وارد حساب کاربری خود شوید
+                                    </p>
+                                    <button class="btn transparent" id="sign-in-btn">ورود</button>
+                                </div>
+                                <img src="/img/undraw_press_play_bx2d.svg" class="image">
+                            </div>
+                        </div>
+                    </div>
+                    <script src="/javascript/signupsignin.js"></script>
+</body>
+
+</html>

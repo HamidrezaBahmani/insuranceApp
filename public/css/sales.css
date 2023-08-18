@@ -1,0 +1,87 @@
+@font-face {font-family: "dana-fanum"; src: url("//db.onlinewebfonts.com/t/ae238c3ee498c52a23aab0d9f5e94d6b.woff");}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family:dana-fanum ;
+  }
+  /* rangpaszamine */
+body {
+   background: #04befe;
+  }
+  /* kadresefid */
+  .main {
+    text-align: center;
+    direction: rtl;
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+    font-size: 18px;
+    font-weight: bold;
+      border-radius: 25px;
+  }
+  /* hazfe underline zire link */
+  .main a {
+    text-decoration: none;
+  }
+  /* title */
+  .main h2 {
+    padding-bottom: 40px;
+    text-align: center;
+  }
+  /* sorte inputha */
+  .input-field {
+      border-radius: 20px 0px 0px 20px;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    font-size: 20px;
+  }
+  /* kadrdar kardan input */
+  .input-field:focus {
+    border: 2px solid dodgerblue;
+  }
+  /* mortab kardan input va icon */
+  .input-container {
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  /* shekel icon ha */
+  .icon {
+    padding: 10px;
+    background: dodgerblue;
+    color: white;
+    min-width: 120px;
+    text-align: center;
+    font-weight: 500;
+    border-radius: 0px 20px 20px 0px;
+  }
+  
+  /* style submit */
+
+  .subm {
+    margin-bottom: 30px;
+    background-color: dodgerblue;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    transition: transform 0.3s;
+    cursor: pointer;
+    border-radius: 25px;
+    width: 100%;
+    opacity: 0.9;
+    font-size: 18px;
+    
+    font-size: 20px;
+    font-weight: bold;
+  }
+  /* taghirbackground submit darzamane select */
+  .subm:focus {
+      transform: translateY(-10px);
+    color: rgb(245, 3, 3);
+  }
+
+
+  

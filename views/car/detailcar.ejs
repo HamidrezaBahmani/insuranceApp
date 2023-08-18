@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/detail.css" />
+  </head>
+  <body>
+    <div>
+      <div class="all">
+        <div class="photo">
+            <% if(car.carCardImageFront!=null){%>
+                <img  src="<%='/'+car.carCardImageFront%>" alt="">
+       <% } else{%>
+        <img src="https://www.pngkit.com/png/detail/113-1131121_economy-car-comments-car-icon-png-transparent.png" alt="">
+        <%}%>
+        </div>
+        <div class="main">
+          <div class="stil">
+            <div class="input-container">
+              <i class="icon">نام اتومبیل</i>
+              <p><%=car.carName %></p>
+            </div>
+
+            <div class="input-container">
+              <i class="icon">رنگ</i>
+              <p><%=car.carColor  %></p>
+            </div>
+            <div class="input-container">
+              <i class="icon">VIN</i>
+              <p><%=car.carVin  %></p>
+            </div>
+            <div class="input-container">
+              <i class="icon">شماره شاسی</i>
+              <p><%=car.carChassisNum  %></p>
+            </div>
+            <div class="input-container">
+              <i class="icon">شماره موتور </i>
+              <p><%=car.carEngineNum  %></p>
+            </div>
+            <div class="input-container">
+              <i class="icon">سال ساخت</i>
+              <p><%=car.ManufactureDate.getFullYear()%></p>
+            </div>
+
+            <div>
+              <button class="submi">
+                <a href="/cars">بازگشت به لیست بیمه نامه ها</a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

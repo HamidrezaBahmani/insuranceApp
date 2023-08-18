@@ -1,0 +1,47 @@
+@font-face {font-family: "dana-fanum"; src: url("//db.onlinewebfonts.com/t/ae238c3ee498c52a23aab0d9f5e94d6b.woff");}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family:dana-fanum ;
+  }
+
+
+
+body{
+    background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+}
+
+
+
+.maincontainer{
+display: flex;
+flex-direction: column;
+width: 50%;
+margin: 0 auto;
+direction: rtl;
+background-color: white;
+margin-top: 5rem;
+padding: 5rem;
+border-radius: 10px;
+}
+
+
+a {
+    width: 160px;
+    text-decoration: none;
+    background-color: #3a47d5;
+    padding: 10px;
+    color: #fff;
+    border-radius: 24px;
+    text-align: center;
+    align-self: flex-end;
+}
+.form-group{
+    margin: .80rem 0;
+}
+.carimg{
+    width:400px;
+     height:400px;
+     margin: 0 auto; 
+}

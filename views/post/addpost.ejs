@@ -1,0 +1,49 @@
+<%- include("../_partial/_header") %>
+ 
+<img class="contactimg" src="/img/undraw_developer_activity_re_39tg.svg" >
+<div class="sendmsginfo">سپاس‌گزار خواهیم بود اگر پیش از ارسال پیام، صفحه‌ی <a  href="/FAQ">پرسش های متداول</a> را ملاحظه فرمایید. ممکن است پرسش مورد نظر شما در میان پرسش‌های رایج کاربران باشد که در این صفحه به آن‌ها پاسخ داده‌ایم</div>
+
+<div class="sendmsg">
+        <form action="/posts/add" method="POST">
+   
+    
+    
+
+
+
+    <div class="form-group">
+        <label for="email">ایمیل:</label>
+        <input type="email" placeholder="" id="inputEmail" name="contactemail" value="<%=currentUser.email%>">
+
+    </div>
+    
+    
+    
+    
+    <div class="form-group">
+                <label for="inputTitle">خلاصه موضوع:</label>
+                <input type="text" placeholder="" id="inputTitle" name="title">
+    
+            </div>
+            <div class="form-group">
+                <label for="inputContents">لطفا درخواست خود را وارد نمایید.</label>
+                <textarea type="text" placeholder="Content" id="inputContents" name="content"></textarea>
+    
+            </div>
+            <div class="form-group">
+                <button onclick="send()" type="submit" href="#" role="button">ارسال</button>
+    
+            </div>
+    
+    
+    
+    
+    
+        </form>
+        <a class="backbtn"  href="/"><h3> بازگشت<i class="fas fa-chevron-right"></i></h3></a>
+</div>
+
+
+
+
+    <%- include("../_partial/_footer") %>

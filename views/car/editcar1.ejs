@@ -1,0 +1,60 @@
+<%- include("../_partial/_header") %>
+    <h1>Edit car :
+        <%= car.carName   %>
+    </h1>
+    <!-- <a href="/cars/add" type="button">New Car</a> -->
+
+
+
+
+    <form action="/cars/update" method="POST" enctype="multipart/form-data">
+
+        <div class="form-group">
+            <label for="carName">نام اتومبیل:</label>
+            <input type="text" placeholder="Car Name" id="carName" name="carName" value="<%=car.carName %>" required>
+
+        </div>
+        <div class="form-group">
+            <label for="carColor">رنگ:</label>
+            <input type="text" placeholder="Car Color" id="carColor" name="carColor" value="<%=car.carColor  %>" required>
+
+        </div>
+        <div class="form-group">
+            <label for="carVin">Vin:</label>
+            <input type="text" placeholder="CarVin" id="carVin" name="carVin" value="<%=car.carVin  %>" required>
+
+        </div>
+        <div class="form-group">
+            <label for="carChassisNum">شماره شاسی:</label>
+            <input type="text" placeholder="CarChassisNum" id="carChassisNum" name="carChassisNum" value="<%=car.carChassisNum  %>" required>
+
+        </div>
+        <div class="form-group">
+            <label for="carEngineNum">شماره موتور:</label>
+            <input type="text" placeholder="CarEngineNum" id="carEngineNum" name="carEngineNum" value="<%=car.carEngineNum  %>" required>
+
+        </div>
+        <div class="form-group">
+            <label for="ManufactureDate">سال ساخت:</label>
+
+            <input type="date" placeholder="ManufactureDate" id="ManufactureDate" name="ManufactureDate" value="<%=carManufactureDate%>"required>
+
+        </div>
+        <input type="file" name="image" value="<%=car.carCardImageFront%>">
+
+        <input type="hidden" id="carid " name="carid" value="<%=car._id%>">
+        <div class="form-group">
+            <button type="submit" href="#" role="button">ویرایش خودرو</button>
+
+        </div>
+
+
+
+
+
+    </form>
+
+
+
+
+    <%- include("../_partial/_footer") %>

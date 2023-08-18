@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/css/addcar.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+   
+    
+    <title>addcar</title>
+</head>
+<body>
+
+
+    <div class="maincontainer">
+        <img class="carimg" src="/img/undraw_by_my_car_ttge.svg" >
+        <div class="info">لطفا با مشاهده کارت اتومبیل از صحت اطلاعات ورودی اطمینان حاصل فرمایید</div>
+        <form action="/cars/add" method="POST">
+    
+            <div class="form-group">
+                <label for="carName">نام اتومبیل:</label>
+                <input type="text" placeholder="" id="carName" name="carName" required>
+    
+            </div>
+            <div class="form-group">
+                <label for="carColor">رنگ:</label>
+                <input type="text" placeholder="" id="carColor" name="carColor" required>
+    
+            </div>
+            <div class="form-group">
+                <label for="carVin">Vin:</label>
+                <input type="text" placeholder="..IRPC" id="carVin" name="carVin" required>
+    
+            </div>
+            <div class="form-group">
+                <label for="carChassisNum">شماره شاسی:</label>
+                <input type="text" placeholder="" id="carChassisNum" name="carChassisNum" required>
+    
+            </div>
+            <div class="form-group">
+                <label for="carEngineNum">شماره موتور:</label>
+                <input type="text" placeholder="" id="carEngineNum" name="carEngineNum" required>
+    
+            </div>
+            <div class="form-group">
+                <label for="ManufactureDate">سال ساخت:</label>
+                <input type="date" placeholder="" id="ManufactureDate" name="ManufactureDate" required>
+    
+            </div>
+    
+            <div class="form-group">
+                <button onclick="sub()" type="submit" href="#" role="button">افزودن</button>
+    
+            </div>
+            
+           
+    
+    
+    
+    
+        </form>
+        <a  href="javascript:history.back()"><h3> بازگشت<i class="fas fa-chevron-right"></i></h3></a>
+    </div>
+</body>
+<script >
+function sub(){swal({
+  title: "",
+  text:"خودرو شما با موفقیت ثبت گردید و در لیست بیمه ها قابل مشاهده است کارشناسان ما به زودی با شما تماس خواهند گرفت",
+  icon: "success",
+  button: "باشه",
+});}
+
+</script>
+</html>

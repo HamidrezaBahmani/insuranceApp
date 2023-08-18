@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <link href="css/profile.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.3.0/css/all.min.css" integrity="sha512-UJqci0ZyYcQ0AOJkcIkUCxLS2L6eNcOr7ZiypuInvEhO9uqIDi349MEFrqBzoy1QlfcjfURHl+WTMjEdWcv67A==" crossorigin="anonymous" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+</head>
+<body>
+    <main>
+        <section class="glass">
+               
+                    <div class="User">
+                        <% if(user.userImage!=null){%>
+                        <img class="image" src="<%='/'+user.userImage%>" onerror="this.onerror=null; this.src='img/profiledefault.png'">
+                        <% } else{%>
+                            <img class="image" src="img/profiledefault.png">
+                            <%}%>
+                        <div class="overlay">
+                            <div class="text" ><label for="fileinput">ویرایش تصویر</label></div>
+                        </div>
+    
+                    </div>
+                   <form action="/User/update" method="POST" enctype="multipart/form-data">
+                        <div class="userinfo">
+                            <div class="input-field">
+                                <i class="fas fa-user"></i>
+                                <input type="text" placeholder="نام کاربری" name="username" placeholder="نام کاربری" required value="<%=user.username%>">
+                                
+                            </div>
+                            
+                            <div class="input-field">
+                                <i class="fas fa-user-check"></i>
+                                <input type="text" placeholder="کد ملی" name="personid" placeholder="کد ملی" value="<%=user.personid%>">
+                            </div>
+                            <div class="input-field">
+                                <i class="fas fa-phone"></i>
+                                <input type="tel" placeholder="شماره تلفن" name="tel" placeholder="شماره تلفن" value="<%=user.tel%>">
+
+                            </div>
+                            <div class="input-field">
+                                <i class="fas fa-map-marked-alt"></i>
+                                <input type="text" placeholder="آدرس" name="address" placeholder="آدرس"value="<%=user.address%>">
+
+                            </div>
+                            <div class="input-field">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" id="Password" name="password" placeholder="پسورد" required >
+                            </div>
+                            <div class="input-field">
+                                <i ></i>
+                                <input type="date" id="birthdate" name="birthdate">
+                            </div>
+                        </div>
+                       
+                        <input type="submit" value="ویرایش" class="btn solid">
+                        <input type="hidden" id="userid " name="userid" value="<%=user._id%>">
+                        <input type="file" id="fileinput" name="image" value="<%=user.userImage%>" style="display:none"> 
+                   </form>
+                   <a href="/" ><input type="submit" value="برگشت به خانه" class="btn solid"></a>
+               
+        </section>
+        <div class="bubbles">
+            <img src="/img/bubble.png">
+            <img src="/img/bubble.png">
+            <img src="/img/bubble.png">
+            <img src="/img/bubble.png">
+            <img src="/img/bubble.png">
+            <img src="/img/bubble.png">
+            <img src="/img/bubble.png">
+          
+        </div>
+    </main>
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+   
+</body>
+</html>

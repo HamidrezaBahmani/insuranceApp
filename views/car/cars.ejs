@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.3.0/css/all.min.css" integrity="sha512-UJqci0ZyYcQ0AOJkcIkUCxLS2L6eNcOr7ZiypuInvEhO9uqIDi349MEFrqBzoy1QlfcjfURHl+WTMjEdWcv67A==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/css/carins.css">
+</head>
+<body>
+    <div>
+        <div class="title">
+            <div class="title1">لیست بیمه های من</div>
+            <div class="menuitems">
+                <div class="add"><a  href="/cars/add"> +افزودن خودرو جدید</a></div>
+                <div class="add"><a  href="/">بازگشت به خانه</a></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="grid">
+                <% cars.forEach(function(car){%>
+                <article>
+                    <% if(car.carCardImageFront!=null){%>
+                        <img  src="<%='/'+car.carCardImageFront%>" alt="">
+               <% } else{%>
+                <img src="https://www.pngkit.com/png/detail/113-1131121_economy-car-comments-car-icon-png-transparent.png" alt="">
+                <%}%>
+                   
+                    <div class="text">
+                        <h3> <%=car.carName%></h3>
+                        <p><%=car.ManufactureDate.getFullYear()%></p>
+                        <a href="cars/<%=car._id %>" class="gridbtn" role="button">مشاهده جزئیات<i class="fas fa-search"></i></a>
+            <a href="cars/edit/<%=car._id %>" class="gridbtn" role="button">ویرایش<i class="fas fa-edit"></i></a>
+            <a  href="cars/delete/<%=car._id %>" class="gridbtn" role="button" >حذف<i class="fas fa-trash-alt"></i></a>
+                    </div>
+                </article>
+    
+                <% });%>
+    
+            </div>
+        </div>
+    </div>
+</body>
+</html>

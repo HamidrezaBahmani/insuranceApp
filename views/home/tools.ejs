@@ -1,0 +1,58 @@
+<%- include("../_partial/_header") %>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/tools.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/autonumeric@4.5.1"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mahmoud-eskandari/NumToPersian/dist/num2persian-min.js"></script>
+    <link rel="stylesheet" href="/css/js-persian-cal.css">
+    <script src="javascript/js-persian-cal.min.js"></script>
+
+
+    <title>Print Check</title>
+
+</head>
+
+<body> 
+    <div class="sendmsginfo">این ابزار جهت سهولت استفاده و پرینت چک های صیادی جدید برای همکاران محترم طراحی گردیده است</div>
+
+    <span class="container">
+       
+        <!-- <img class="printimg" src="img/undraw_printing_invoices_-5-r4r.svg"> -->
+        <div class="inputs">
+            <form id="check-form">
+            <p>مبلغ:</p>
+            <input name="price" type="text" id="DEMO" data-a-sign="" data-a-dec="," data-a-sep="." class="form-control">
+            
+            <p>تاریخ:</p>
+            
+            <input name="date" type="text" id="pcal1" class="pdate">
+            <p>در وجه:</p>
+            <input id="reciver" value="">
+            <button class="btnn" type="submit">ثبت</button>
+           
+        </form>
+        <button class="btnn" onclick="window.print()">پرینت</button>
+        
+        </div>
+
+        <div class="show-check">
+            <img src="img/untitle4.png" alt="">
+            <p id="price-val-sentence"></p>
+            <p id="price-val-num"></p>
+            <p id="date-val"></p>
+            <p id="reciver-val"></p>
+            <p id="date-val-horofi"></p>
+        </div>
+    </span>
+</body>
+
+<script src="/javascript/scripts.js"></script>
+
+</html>
+<%- include("../_partial/_footer") %>

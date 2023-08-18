@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Insurance</title>
+        <link href="/css/main.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/fonttellocss/fontello.css">
+        <script src="https://cdn.ckeditor.com/4.16.2/basic/ckeditor.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.3.0/css/all.min.css" integrity="sha512-UJqci0ZyYcQ0AOJkcIkUCxLS2L6eNcOr7ZiypuInvEhO9uqIDi349MEFrqBzoy1QlfcjfURHl+WTMjEdWcv67A==" crossorigin="anonymous" />
+        <script
+        src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+        crossorigin="anonymous"></script>
+        <script>
+            
+        $(function() {
+        $(".toggle").on("click", function() {
+            if ($(".item").hasClass("active")) {
+                $(".item").removeClass("active");
+            } else {
+                $(".item").addClass("active");
+            }
+        });
+    });
+        </script>
+    </head>
+</head>
+
+<body>
+    <div class="containner">
+        
+            <nav>
+                <ul class="menu">
+                    <li class="logo"><a href="/">بیمه آسیا</a></li>
+                    
+                    
+                    <li class="item"><a  href="/tools">ابزارها<i class="fas fa-wrench"></i></a></li>
+                    <li class="item"><a  href="/about">درباره ما<i class="fas fa-users"></i></a></li>
+                    <li class="item"><a  href="/glorygallery">افتخارات بیمه آسیا<i class="fas fa-medal"></i></a></li>
+                    <!-- <li class="item"><a href="/home">خانه</a></li> -->
+                    <% if (currentUser!=null){%>
+                    <li  class="item"><a href="/cars"> بیمه های شخص ثالث <i class="fas fa-car-crash"></i></a></li>                  
+                    <li class="item"><a href="/user">خوش آمدید  <%=currentUser.username%><i class="fas fa-user-check"></i> </a></li>
+                    <li class="item"><a href="/logout">خروج<i class="fas fa-sign-out-alt"></i></a></li>
+                    <% }%>
+                    <% if(currentUser==null){%>
+                    <li class="item button"><a href="/signup&loging"> ورود به حساب کاربری<i class="fas fa-door-open"></i></a></li>
+                    <%}%>
+                    <li class="toggle"><span class="bars"></span></li>
+                </ul>
+            </nav>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!-- <div class="logo">
+                <h1><a href="/">Asia Insurance</a></h1>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="/home">خانه</a></li>
+                    <li><a href="/about">درباره ما</a></li>
+                    <% if (currentUser!=null){%>
+                        <li><a href="/cars"> بیمه های شخص ثالث </a></li>
+                        <li><a href="/posts"> My Posts </a></li> 
+                        <li><a href="/user">خوش آمدید  <%=currentUser.username%> </a></li>
+                        <li><a href="/logout">خروج</a></li>
+                        <% }%>
+                            <% if(currentUser==null){%>
+                                <li><a href="/signup&loging"> ورود به حساب کاربری</a></li>
+
+                                <%}%>
+                </ul>
+            </div> -->
+
+        
+    </div>
+    <div class="containner">
+        <% if(error && error.length>0){%>
+            <div class="alertbox">
+                <span class="alerticon"><i class="fas fa-exclamation-circle"></i></span>
+                <span class="alertmsg"> <%=error%></span>
+
+            </div>
+            <% }%>
+
+
+                <% if(info && info.length>0){%>
+                    <div class="infobox">
+                        <span class="infoicon"><i class="fas fa-info-circle"></i></span>
+                        <span class="infomsg"> <%=info%></span>
+
+                    </div>
+                   
+                    
+
+                    <% }%>

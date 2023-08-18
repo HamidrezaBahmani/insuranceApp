@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <title>login</title>
+    <link rel="stylesheet" href="/css/sales.css" />
+  </head>
+  <body>
+    <form action="/cars/update" style="max-width: 500px; margin: auto" method="POST" enctype="multipart/form-data">
+      <div class="main">
+        <h2>ویرایش اطلاعات اتومبیل</h2>
+
+        <div class="input-container">
+          <i class="icon">نام اتومبیل</i>
+          <input class="input-field" type="text" placeholder="نام اتومبیل"  id="carName" name="carName" value="<%=car.carName %>"/>
+        </div>
+
+        <div class="input-container">
+          <i class="icon">رنگ</i>
+          <input class="input-field" type="text" placeholder="رنگ " id="carColor" name="carColor" value="<%=car.carColor  %>" />
+        </div>
+        <div class="input-container">
+            <i class="icon">Vin</i>
+            <input class="input-field" type="text" placeholder="carvin "id="carVin" name="carVin" value="<%=car.carVin  %>"/>
+          </div>
+          <div class="input-container">
+            <i class="icon">شماره شاسی</i>
+            <input class="input-field" type="text" placeholder="شماره شاسی "id="carChassisNum" name="carChassisNum" value="<%=car.carChassisNum  %>"/>
+          </div>
+          <div class="input-container">
+            <i class="icon">شماره موتور </i>
+            <input class="input-field" type="text" placeholder="شماره موتور " id="carEngineNum" name="carEngineNum" value="<%=car.carEngineNum  %>" />
+          </div>
+          <div class="input-container">
+            <i class="icon">سال ساخت</i>
+            <input class="input-field" type="date" placeholder="سال ساخت" id="ManufactureDate" name="ManufactureDate" value="<%=carManufactureDate%>" />
+          </div>
+          <div class="input-container">
+            <i class="icon">افزودن فایل</i>
+            <input class="input-field" type="file"  name="image"  value="<%=car.carCardImageFront%>"/>
+            <input type="hidden" id="carid " name="carid" value="<%=car._id%>"/>
+          </div>
+        <div class="submi">
+          <button class="subm" type="submit" role="button">ویرایش اطلاعات</button>
+          <a class="subm" href="/cars">انصراف</a>
+        </div>
+       
+      </div>
+      
+    </form>
+    
+  </body>
+</html>

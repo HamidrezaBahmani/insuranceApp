@@ -1,0 +1,76 @@
+@font-face {font-family: "dana-fanum"; src: url("//db.onlinewebfonts.com/t/ae238c3ee498c52a23aab0d9f5e94d6b.woff");}
+
+body{
+    
+    background-color: rgba(189, 187, 187, 0.466);
+    font-family: dana-fanum;
+}
+.mage{
+    text-align: center;
+}
+.all{
+    background-color: rgb(255, 255, 255);
+    margin: 30px auto;
+    padding: 20px;
+    direction: rtl;
+
+}
+p{
+    font-size: 16px;
+    font-family:dana-fanum ;
+}
+button{
+    
+    background-color: #5c5c5f;
+    color: white;
+    margin: 10px;
+    padding: 5px;
+    width: 100px;
+    font-size: 18px;
+    border-radius:20px ;
+}
+.fot{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: linear-gradient( 
+        350deg, #080808, #04befe);
+        color: white;
+    margin-top: 20px;
+    direction: rtl;
+}
+.fotext i{
+    margin-left: 10px;
+}
+.fotext p{
+    margin-bottom: 10px;
+}
+.map{
+    margin: 20px;
+}
+button:hover{
+    transition: transform 0.5s;
+    transform: translateY(-5px);
+}
+@media (min-width: 800px){
+    .all{width: 900px};
+}
+@media (max-width: 800px){
+    .fot{
+        padding: 10px
+    };
+}
+@media (max-width: 500px){
+    .mage img{
+        background-color: red;
+       width: 250px;
+       height: 250px;
+    }
+    .fot{
+        display: flex;
+        flex-direction: column;
+    }
+    .fotext{
+        padding: 10px;
+    }
+}
